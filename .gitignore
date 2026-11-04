@@ -1,0 +1,75 @@
+# OS/IDE
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+backend/venv/
+frontend/venv/
+venv/
+.env
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/.cache/
+frontend/.parcel-cache/
+frontend/build/
+frontend/dist/
+frontend/.next/
+frontend/out/
+frontend/npm-debug.log*
+frontend/yarn-error.log*
+
+# Electron outputs
+Clarivo-standalone/
+dist/
+!dist/builder-*.yml
+!dist/builder-*.yaml
+!dist/*effective*.yaml
+
+# Electron unpacked artifacts
+/dist/win-unpacked/
+/dist/win-unpacked/**
+/frontend/node_modules/electron/
+/frontend/node_modules/.cache/
+**/*.asar
+
+# App uploads and generated assets
+uploads/
+frontend/uploads/
+backend/uploads/
+
+# Build scripts outputs
+backend/build/
+backend/dist/
+
+# CSV/large datasets (keep in data/ if needed)
+backend/data/*.csv
+backend/data/*.json
+
+# Misc
+*.blockmap
+*.exe
+*.dll
+*.bin
+*.pak
+*.dat
+*.icd
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.map
+

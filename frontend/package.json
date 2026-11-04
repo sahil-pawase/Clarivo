@@ -1,0 +1,120 @@
+{
+  "name": "clarivo-frontend",
+  "version": "1.0.0",
+  "description": "Clarivo AI-powered data analysis tool - Desktop Application",
+  "author": "Clarivo Team",
+  "license": "MIT",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.28.3",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@hookform/resolvers": "^3.10.0",
+    "@types/node": "^20.8.10",
+    "autoprefixer": "^10.4.16",
+    "axios": "^1.6.0",
+    "cosmiconfig": "^10.0.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.2",
+    "plotly.js-dist-min": "^3.1.0",
+    "postcss": "^8.4.31",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.62.0",
+    "react-hot-toast": "^2.4.1",
+    "react-query": "^3.39.3",
+    "react-scripts": "^5.0.1",
+    "recharts": "^2.15.4",
+    "tailwindcss": "^3.3.5",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "concurrently": "^8.2.2",
+    "dotenv": "^17.2.2",
+    "electron": "^27.0.4",
+    "electron-builder": "^24.6.4",
+    "http-proxy-middleware": "^3.0.5",
+    "typescript": "4.9.5",
+    "wait-on": "^7.2.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js",
+    "dev": "node server.js",
+    "dev:webpack": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm run start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "electron-builder",
+    "preelectron-pack": "npm run build"
+  },
+  "build": {
+    "appId": "com.clarivo.app",
+    "productName": "Clarivo",
+    "directories": {
+      "output": "c:/clarivo-build"
+    },
+    "files": [
+      "build/**/*",
+      "public/electron.js",
+      "public/preload.js",
+      "public/logo.jpg",
+      "public/favicon.ico",
+      "public/favicon-16x16.png",
+      "public/favicon-32x32.png",
+      "public/apple-touch-icon.png",
+      "node_modules/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "public/logo.jpg",
+        "to": "logo.jpg"
+      },
+      {
+        "from": "../dist/clarivo-backend.exe",
+        "to": "backend/clarivo-backend.exe"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "public/logo.jpg"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "public/logo.jpg"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

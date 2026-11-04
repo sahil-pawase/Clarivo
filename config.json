@@ -1,0 +1,40 @@
+{
+  "application": {
+    "name": "Clarivo",
+    "version": "1.0.0",
+    "description": "AI-Powered Data Analysis Tool"
+  },
+  "backend": {
+    "host": "localhost",
+    "port": 8000,
+    "debug": false,
+    "cors_origins": ["http://localhost:3000", "http://127.0.0.1:3000"]
+  },
+  "frontend": {
+    "host": "localhost",
+    "port": 3000,
+    "api_url": "http://localhost:8000"
+  },
+  "ai": {
+    "provider": "ollama",
+    "model": "llama3.1",
+    "max_tokens": 1000,
+    "temperature": 0.7
+  },
+  "features": {
+    "ai_analysis": true,
+    "data_cleaning": true,
+    "visualization": true,
+    "export": true
+  },
+  "limits": {
+    "max_file_size": "100MB",
+    "max_upload_files": 10,
+    "max_dataset_rows": 100000
+  },
+  "paths": {
+    "data_directory": "backend/data",
+    "uploads_directory": "backend/uploads",
+    "logs_directory": "logs"
+  }
+}

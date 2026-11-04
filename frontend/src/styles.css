@@ -1,0 +1,388 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-navy: #0D1B2A;
+	--color-electric: #007AFF;
+	--color-soft-gray: #E5E5E5;
+	--header-h: 56px;
+	--sidebar-w: 280px;
+	--context-w: 320px;
+	--radius: 16px;
+	--card-bg: rgba(16, 24, 39, .65);
+	--border: rgba(255,255,255,.08);
+}
+
+html, body, #root {
+	height: 100%;
+	background: radial-gradient(1200px 600px at 20% 10%, rgba(0, 122, 255, 0.18), transparent 70%),
+		linear-gradient(180deg, rgba(13, 27, 42, 0.98), rgba(13, 27, 42, 1));
+	color: white;
+}
+
+/* Fix for Electron text rendering issues */
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* Ensure proper text color inheritance in Electron */
+h1, h2, h3, h4, h5, h6, p, span, div, label, button {
+	color: inherit;
+}
+
+/* Disable problematic gradient text effects for Electron compatibility */
+.bg-clip-text {
+	-webkit-background-clip: unset !important;
+	background-clip: unset !important;
+}
+
+.text-transparent {
+	color: inherit !important;
+}
+
+/* Additional Electron-specific text rendering fixes */
+.text-white {
+	color: #ffffff !important;
+}
+
+.text-gray-300 {
+	color: #d1d5db !important;
+}
+
+.text-gray-400 {
+	color: #9ca3af !important;
+}
+
+.text-blue-300 {
+	color: #93c5fd !important;
+}
+
+.text-blue-400 {
+	color: #60a5fa !important;
+}
+
+.text-green-300 {
+	color: #86efac !important;
+}
+
+.text-green-400 {
+	color: #4ade80 !important;
+}
+
+.text-purple-300 {
+	color: #c4b5fd !important;
+}
+
+.text-purple-400 {
+	color: #a78bfa !important;
+}
+
+.text-yellow-400 {
+	color: #facc15 !important;
+}
+
+/* Ensure proper contrast for text readability in Electron */
+.glass h3, .glass h2, .glass h1 {
+	color: #ffffff !important;
+}
+
+.glass p, .glass span, .glass div {
+	color: inherit;
+}
+
+/* Chat interface specific styles */
+.chat-message {
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+.chat-message:hover {
+	transform: translateY(-1px);
+	transition: transform 0.2s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* User avatar improvements */
+.user-avatar {
+	box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Message bubble improvements */
+.message-bubble {
+	word-break: break-word;
+	line-height: 1.5;
+}
+
+/* Input field focus improvements */
+.chat-input:focus {
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Formatted text styling for AI responses */
+.message-bubble strong {
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.message-bubble em {
+	font-style: italic;
+	color: #d1d5db;
+}
+
+.message-bubble ul {
+	list-style: none;
+	padding-left: 0;
+	margin: 0.5rem 0;
+}
+
+.message-bubble li {
+	margin: 0.25rem 0;
+	padding-left: 1rem;
+	position: relative;
+}
+
+.message-bubble li:before {
+	content: "•";
+	color: #60a5fa;
+	font-weight: bold;
+	position: absolute;
+	left: 0;
+}
+
+/* Line break spacing - reduced for cleaner look */
+.message-bubble br {
+	margin: 0.1rem 0;
+}
+
+/* Additional formatting improvements - tighter spacing */
+.message-bubble p {
+	margin: 0.2rem 0;
+}
+
+.message-bubble p:first-child {
+	margin-top: 0;
+}
+
+.message-bubble p:last-child {
+	margin-bottom: 0;
+}
+
+/* Better spacing for lists - more compact */
+.message-bubble ul {
+	margin: 0.4rem 0;
+}
+
+.message-bubble li {
+	margin: 0.2rem 0;
+	line-height: 1.3;
+}
+
+/* Highlight important information */
+.message-bubble strong {
+	background: linear-gradient(120deg, rgba(59, 130, 246, 0.2), transparent);
+	padding: 0.1rem 0.3rem;
+	border-radius: 0.25rem;
+}
+
+/* Compact text rendering */
+.message-bubble {
+	font-size: 0.9rem;
+	line-height: 1.4;
+}
+
+/* Tighter spacing for all elements */
+.message-bubble * {
+	margin: 0.1rem 0;
+}
+
+/* Compact list styling */
+.message-bubble ul {
+	padding-left: 0.5rem;
+}
+
+.message-bubble li {
+	padding-left: 0.5rem;
+}
+
+.message-bubble li:before {
+	left: -0.5rem;
+}
+
+/* Header improvements */
+.insights-header {
+	background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05));
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.insights-header h2 {
+	background: linear-gradient(135deg, #60a5fa, #a78bfa);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* Dataset selector improvements */
+.dataset-selector {
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	transition: all 0.2s ease;
+}
+
+.dataset-selector:hover {
+	background: rgba(255, 255, 255, 0.12);
+	border-color: rgba(255, 255, 255, 0.25);
+}
+
+.dataset-selector:focus {
+	background: rgba(255, 255, 255, 0.15);
+	border-color: #60a5fa;
+	box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+/* PowerBI-like Layout System */
+.app {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: var(--header-h) 1fr;
+	grid-template-columns: var(--sidebar-w) 1fr var(--context-w);
+}
+
+.app > header { 
+	grid-column: 1 / -1; 
+}
+
+.sidebar, .context { 
+	overflow: auto; 
+}
+
+.main {
+	overflow: auto;               /* only this area scrolls */
+	padding: 16px;
+}
+
+.chart-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 20px;
+	align-content: start;
+}
+
+.card {
+	background: var(--card-bg);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: 0 6px 24px rgba(0,0,0,.35);
+	overflow: hidden;             /* prevents legend/tooltip spill */
+}
+
+.chart-card { 
+	min-height: 400px; 
+	display: flex;
+	flex-direction: column;
+}
+
+.glass {
+	background: rgba(255, 255, 255, 0.06);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 14px;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.gradient-accent {
+	background: linear-gradient(135deg, #00E5FF 0%, #7B61FF 100%);
+}
+
+/* Premium scrollbar */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.16); border-radius: 8px; }
+*::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.24); }
+
+/* Subtle card hover */
+.glass:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08); }
+
+/* Table improvements */
+table { border-collapse: separate; border-spacing: 0; }
+th { position: sticky; top: 0; }
+thead th { background: rgba(255,255,255,0.08); }
+
+/* Chart-specific styles */
+.chart-title {
+	font-size: 16px;
+	font-weight: 600;
+	color: #f3f4f6;
+	margin-bottom: 4px;
+	padding: 16px 16px 0 16px;
+}
+
+.chart-subtitle {
+	font-size: 13px;
+	color: #9ca3af;
+	margin-bottom: 12px;
+	padding: 0 16px;
+}
+
+/* Responsive breakpoints for charts */
+@media (max-width: 768px) {
+	.chart-grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+	
+	.app {
+		grid-template-columns: 1fr;
+	}
+	
+	.sidebar, .context {
+		display: none;
+	}
+	
+	.chart-card {
+		min-height: 350px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.chart-grid {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	}
+}
+
+/* Global dropdown improvements - ensure dark theme consistency */
+select { 
+	background-color: #1f2937 !important; /* bg-gray-800 */
+	border-color: #4b5563 !important; /* border-gray-600 */
+	color: #ffffff !important; /* text-white */
+}
+
+select option { 
+	background-color: #1f2937 !important; /* bg-gray-800 */
+	color: #ffffff !important; /* text-white */
+}
+
+select option:hover { 
+	background-color: #374151 !important; /* bg-gray-700 */
+}
+
+/* Ensure dropdowns in modals and forms have proper styling */
+select:focus {
+	outline: none !important;
+	border-color: #60a5fa !important; /* border-blue-400 */
+	box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1) !important;
+}
+
+

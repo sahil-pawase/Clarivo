@@ -1,0 +1,38 @@
+{
+  "name": "clarivo-app",
+  "version": "1.0.0",
+  "description": "Clarivo - AI-Powered Data Analysis Tool",
+  "main": "run.js",
+  "scripts": {
+    "dev": "node run.js",
+    "start": "node run.js",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix frontend test",
+    "electron": "npm --prefix frontend run electron",
+    "electron-dev": "npm --prefix frontend run electron-dev",
+    "start:frontend": "npm --prefix frontend start",
+    "start:backend": "cd backend && .\\venv\\Scripts\\python.exe main.py"
+  },
+  "keywords": [
+    "data-analysis",
+    "ai",
+    "gemini",
+    "fastapi",
+    "react",
+    "electron"
+  ],
+  "author": "Clarivo Team",
+  "license": "MIT",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

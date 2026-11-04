@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: clarivo-enterprise-core
+    environment:
+      - DEBUG=False
+      - SECRET_KEY=clarivo-enterprise-secret-key-production
+      - DATABASE_URL=postgresql://neondb_owner:npg_xtOSF9ML1wKI@ep-red-hat-ay7lsej8.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-AQ.Ab8RN6JdYFj4lHf8Aws8g1W-w-Ug63SC59j1fzD6wtO3b5cU2Q}
+      - CORS_ORIGINS=["http://localhost:3000","http://localhost:8000","http://127.0.0.1:3000"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - clarivo_data:/app/backend/data
+      - clarivo_uploads:/app/backend/uploads
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  clarivo_data:
+    driver: local
+  clarivo_uploads:
+    driver: local

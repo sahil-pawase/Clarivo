@@ -1,0 +1,166 @@
+[
+  {
+    "file": "1549111d-aac8-4b35-bd28-a8e0f8c8e303.csv",
+    "read_ms": 76.27109999884851,
+    "rows": 10,
+    "cols": 16,
+    "memory_usage_bytes": 13890,
+    "data_quality_ms": 23.281200003111735,
+    "total_cells": 160,
+    "missing_cells": 0,
+    "completeness_pct": 100.0,
+    "duplicate_rows": 0,
+    "numeric_stats": {
+      "career_popularity": {
+        "mean": 85.5,
+        "median": 86.5,
+        "std": 6.570134448142341,
+        "min": 75.0,
+        "max": 95.0
+      }
+    },
+    "preview_serialize_ms": 0.17189999925903976,
+    "preview_payload_bytes": 10494,
+    "chart_create_ms": 7520.166499976767,
+    "chart_payload_bytes": 8214,
+    "chart_error": null
+  },
+  {
+    "file": "2c17330b-d83f-45bd-9026-ca3a76a11966.csv",
+    "read_ms": 29.76969999144785,
+    "rows": 34,
+    "cols": 11,
+    "memory_usage_bytes": 15045,
+    "data_quality_ms": 4.437600000528619,
+    "total_cells": 374,
+    "missing_cells": 202,
+    "completeness_pct": 45.98930481283423,
+    "duplicate_rows": 1,
+    "numeric_stats": {
+      "Unnamed: 0": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "Unnamed: 1": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "Unnamed: 5": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "preview_serialize_ms": 0.2086999884340912,
+    "preview_payload_bytes": 10535,
+    "chart_create_ms": 45.30749999685213,
+    "chart_payload_bytes": 8357,
+    "chart_error": null
+  },
+  {
+    "file": "43667d09-2c6a-466d-99c7-ab8e1094290c.csv",
+    "read_ms": 6.248999998206273,
+    "rows": 34,
+    "cols": 11,
+    "memory_usage_bytes": 15045,
+    "data_quality_ms": 1.2403999862726778,
+    "total_cells": 374,
+    "missing_cells": 202,
+    "completeness_pct": 45.98930481283423,
+    "duplicate_rows": 1,
+    "numeric_stats": {
+      "Unnamed: 0": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "Unnamed: 1": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "Unnamed: 5": {
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "preview_serialize_ms": 0.1416000013705343,
+    "preview_payload_bytes": 10535,
+    "chart_create_ms": 39.71089998958632,
+    "chart_payload_bytes": 8357,
+    "chart_error": null
+  },
+  {
+    "file": "4695d0fa-3b0b-4e23-ba37-8b2b38fa6c3d.csv",
+    "read_ms": 20.61649999814108,
+    "rows": 10,
+    "cols": 5,
+    "memory_usage_bytes": 1579,
+    "data_quality_ms": 1.0037000174634159,
+    "total_cells": 50,
+    "missing_cells": 0,
+    "completeness_pct": 100.0,
+    "duplicate_rows": 0,
+    "numeric_stats": {
+      "odi_runs": {
+        "mean": 8078.7,
+        "median": 8828.5,
+        "std": 3769.7402518829686,
+        "min": 1687.0,
+        "max": 12810.0
+      },
+      "test_runs": {
+        "mean": 8394.6,
+        "median": 9513.0,
+        "std": 3464.972605310979,
+        "min": 1255.0,
+        "max": 11582.0
+      },
+      "t20_runs": {
+        "mean": 1466.2,
+        "median": 877.5,
+        "std": 1165.9035408929278,
+        "min": 339.0,
+        "max": 2966.0
+      }
+    },
+    "preview_serialize_ms": 0.0703000114299357,
+    "preview_payload_bytes": 1224,
+    "chart_create_ms": 37.46720001799986,
+    "chart_payload_bytes": 8210,
+    "chart_error": null
+  },
+  {
+    "file": "4e810c6d-259c-4d1f-b88d-595d0d2ac9ff.csv",
+    "read_ms": 24.60519998567179,
+    "rows": 20,
+    "cols": 16,
+    "memory_usage_bytes": 18011,
+    "data_quality_ms": 1.4741999912075698,
+    "total_cells": 320,
+    "missing_cells": 113,
+    "completeness_pct": 64.6875,
+    "duplicate_rows": 0,
+    "numeric_stats": {},
+    "preview_serialize_ms": 0.15979999443516135,
+    "preview_payload_bytes": 12277,
+    "chart_create_ms": null,
+    "chart_payload_bytes": null,
+    "chart_error": "no_numeric_columns"
+  }
+]
