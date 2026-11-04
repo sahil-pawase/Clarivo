@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CLARIVO: Enterprise AI Data Platform & Decision Intelligence
 
 [![Architecture](https://img.shields.io/badge/Architecture-Local--First%20Zero--Trust-blue?style=for-the-badge&logo=shield)](file:///c:/Users/sahil/OneDrive/Desktop/app.clarivo-main/EXECUTIVE_PITCH_AND_ARCHITECTURE.md)
@@ -116,3 +117,7 @@ npm start
 - **Databases**: Neon Serverless PostgreSQL 16 (Cloud) / SQLite (Edge Fallback).
 - **AI Models**: Google Gemini 3.6 Flash / Gemini 2.5 Flash with Context-Grounded Schemas.
 - **DevOps**: Docker Multi-Stage, Docker Compose, GitHub Actions CI/CD.
+=======
+# Clarivo
+Clarivo is an AI-driven, local-first data analytics platform for automated data cleaning, conversational data analysis, and dynamic visualization. It supports Excel/CSV datasets and uses techniques such as KNN imputation, anomaly detection, and fuzzy duplicate detection to help users transform raw data into meaningful insights.
+>>>>>>> d332105f846b5802a0dcef43c52875ca5a258ddf
